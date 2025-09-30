@@ -15,5 +15,58 @@ OLTP VS OLAP
 |Queries    | Simple transactions & frequent updates    |complex, aggtegated queries & limited update     |
 |Users    | thousands  |hundreds    |
 
-## OlTP AND OLAP working together
+## OLTP AND OLAP working together
 ![GKs8xq-WwAAauCD](https://github.com/user-attachments/assets/83918811-2fab-4a39-bda2-b44c6f2861c6)
+
+## Strucure Data 
+Easer To analyze But less flexibilty and scalablilty 
+
+## Data warehouses Vs Data lake 
+### Data warehouse
+- Optimized for analytics - OLAP
+   - Organized for reading/ aggtrgating data
+   - Usually read-only
+- Contains data from multiple sources
+- Massively Parallel Processing
+- Typically uses a denormalized schema and dimensional modeling
+#### Data marts
+- subset of data warehouses
+- Deficated to specific topic
+### Data lakes
+ - Store all types of data at a lower cost:
+    - row, operational database, IoT devices logs, real-time, relational and non-relational
+- Retains all data and can take up petabytes
+- Schema-on-read as opposed to schema-on-write
+- need to catalog data otherwise becomes a data swamp
+- Run big data analytics using services such as apache spark and hadoop
+  - Useful for deep learning and data discovery because activites require so much data
+## ETL vs ELT
+
+### ETL (Extract → Transform → Load)
+
+```text
++-------------+       +------------------+       +-------------------+
+|             |       |                  |       |                   |
+| Data Source | ====> | Transformation   | ====> |  Data Warehouse   |
+|             |       |   (ETL Tool)     |       |   (Storage)       |
++-------------+       +------------------+       +-------------------+
+
+ Step 1: Extract    - Pull raw data from source  
+ Step 2: Transform  - Clean and reshape data before storage  
+ Step 3: Load       - Load transformed data into the warehouse  
+```
+
+### ELT (Extract → Load → Transform )
+```text
++-------------+       +-------------------+       +-------------------+
+|             |       |                   |       |                   |
+| Data Source | ====> |  Data Warehouse   | ====> |  Transformation   |
+|             |       |   (Storage)       |       |   (in-warehouse)  |
++-------------+       +-------------------+       +-------------------+
+
+ Step 1: Extract    - Pull raw data from source  
+ Step 2: Load       - Load raw data directly into the warehouse  
+ Step 3: Transform  - Transform data inside the warehouse using SQL or tools  
+```
+
+
