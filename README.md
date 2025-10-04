@@ -128,7 +128,7 @@ Easer To analyze But less flexibilty and scalablilty
        AND s.city = 'Vancouver'
        AND d.quarter = 'Q4'
        AND d.year = 2018
-        ```
+
 * Normalization Saves Space
 * Denormalized database enable **data redundancy**
 * Normalization eliminates **data redundancy**
