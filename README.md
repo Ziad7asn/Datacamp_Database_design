@@ -70,3 +70,39 @@ Easer To analyze But less flexibilty and scalablilty
 ```
 
 
+### Star Schema Vs Snowflake schema
+#### Dimensional modeling: Star schema 
+<p>Fact tables</p> 
+
+* Holds records of a metric
+* Changes regularly
+* Connects to dimensions via foreign keys
+  
+<p>Dimension tables</p> 
+
+* Holds descriptions of attributes
+* Does not changes as often
+
+<p>Example: </p> 
+
+* Supply books to store is USA and Canada
+* Keep track of book sales
+
+
+<img width="364" height="139" alt="download" src="https://github.com/user-attachments/assets/dbf99647-c222-49f5-8a2b-28ced859d78c" />
+
+#### Dimensional modeling: Snowflake schema
+
+  
+<p>Dimension tables</p> 
+
+* More than one dimension because dimension tab0les are normalized
+
+<img width="305" height="165" alt="download" src="https://github.com/user-attachments/assets/4e0acb58-0962-458b-91d4-b27e26dd4ba9" />
+
+
+### What is normalization ?
+
+* Database design technique
+* Divides tables into smaller tables and connects them via relationships
+* Goal : reduce redundancy and increase data integrity
