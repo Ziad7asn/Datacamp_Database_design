@@ -106,3 +106,32 @@ Easer To analyze But less flexibilty and scalablilty
 * Database design technique
 * Divides tables into smaller tables and connects them via relationships
 * Goal : reduce redundancy and increase data integrity
+
+
+### Denormalized Query 
+* GOAL: Get quantity of all octavia E. Butler Books solid in Vancouver in Q4 of 2018
+  ```text
+  SELECT 
+    SUM(f.quantity) AS total_quantity
+   FROM 
+       fact_sales f
+   JOIN dim_book b 
+       ON f.book_id = b.book_id
+   JOIN dim_author a 
+       ON b.author_id = a.author_id
+   JOIN dim_store s 
+       ON f.store_id = s.store_id
+   JOIN dim_date d 
+       ON f.date_id = d.date_id
+   WHERE 
+       a.author_name = 'Octavia E. Butler'
+       AND s.city = 'Vancouver'
+       AND d.quarter = 'Q4'
+       AND d.year = 2018
+        ```
+* Normalization Saves Space
+* Denormalized database enable **data redundancy**
+* Normalization eliminates **data redundancy**
+
+
+
