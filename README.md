@@ -132,6 +132,16 @@ Easer To analyze But less flexibilty and scalablilty
 * Normalization Saves Space
 * Denormalized database enable **data redundancy**
 * Normalization eliminates **data redundancy**
+ 
+### Normalization ensures better data integity
+1. Enforces data consistency : Must respect naming conv. bec. of ref. integity
+2. Safer updating, removing, and inserting -> Less data redundancy = Less records to alter
+3. Easier to redesign by extending -> Smaller tables are easier to extend than larger tables
 
 
-
+### Database normalization
+#### Advantages
+   * Normalization eliminates data redundancy: save on storage
+   * Better data integrity: accurate and consistent data
+#### Disadvantages
+   * Complex queries require more CPU
