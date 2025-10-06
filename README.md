@@ -145,3 +145,22 @@ Easer To analyze But less flexibilty and scalablilty
    * Better data integrity: accurate and consistent data
 #### Disadvantages
    * Complex queries require more CPU
+### Normal Forms
+#### 1NF Rules
+* Each Record must be unique - no dublicate rows
+* Each cell must hold one value
+#### 2NF Rules
+* Must satify 1NF AND
+   * if primary key is one column
+      * then auomaticly satisfies 2NF
+   * if there is a composite primary key
+      * then each non-key column must be dependent on all the keys
+ #### 3NF Rules    
+ * Satisfies 2NF
+ * No Transitive dependencies: non-key columns can't depend on other non-key columns
+
+### Database anomalies 
+What is risked if we don't noralize enough ?
+1. Update anomaly
+2. insertion anomaly
+3. Deletion anomaly
