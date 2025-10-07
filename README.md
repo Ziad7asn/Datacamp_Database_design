@@ -164,3 +164,18 @@ What is risked if we don't noralize enough ?
 1. Update anomaly
 2. insertion anomaly
 3. Deletion anomaly
+
+## Database views
+Virtual table that is not part of physucal schema
+* query, not data, is stored in memory
+* Data is aggregated from data in tables
+* Can be queried like a regular database table
+
+### Benefits of views
+* Doesn't take up storage
+* A from of access control
+   * hide sensitive columns and restrict what user can see
+* Makes complexity of queires
+  * Useful for highly normalized schemas
+
+
